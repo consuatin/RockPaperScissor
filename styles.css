@@ -1,0 +1,195 @@
+/* PAGE */
+body {
+    background: #12232E;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* HEADER */
+header {
+    width: 100%;
+    padding: 2px;
+    margin-bottom: 10px;
+    background: #007CC7;
+}
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: #EEFBFB;
+}
+/* HEADER FORM */
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.header-text {
+    margin-top: 50px;
+    color:#12232E;
+}
+/* IF YES FORM  */
+.if-yes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    align-items: baseline;
+}
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+input {
+    text-align: center;
+}
+.nickname {
+    height: 30px;
+    border-radius: 5px;
+    border: 1px solid #007CC7;
+}
+.submit {
+    margin-top: 20px;
+    margin-left: 1em;
+    background-color: #B73225;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    height: 30px;
+}
+/* IF NO FORM */
+.if-no {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    align-items: baseline;
+}
+#reset-score {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.reset {
+    border-radius: 2px;
+    height: 30px;
+    width: 60px;
+    background-color:#B73225;
+}
+.gray {
+    background-color: gray;
+}
+/* MAIN */
+main {
+}
+/* ROUND TAG */
+.round-tag {
+    display: inline-block;
+    margin-top: 0;
+    background-color:#007CC7;
+    border-radius: 2px;
+    width: 20%;
+    margin-right: 40%;
+    margin-left: 40%;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+/* SCORING BOX */
+.score-box {
+    border: solid 1px #007CC7;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    height: 300px;
+    width: 80%;
+    background-color: #203647;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+h2 {
+    margin-top: 20px;
+    font-family:sans-serif;
+    color: #EEFBFB;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    width: 100%;
+}
+        /* Nested in h2 */
+        .rivals {
+            font-size: 0.5em;
+            width: 20%;
+            border-radius: 5px;
+            background-color:#B73225;
+            padding: 5px;
+            margin-bottom: 50px; 
+        }
+        .score {
+            padding: 5px;
+            font-size: 4em;
+            padding: auto;
+            color:#EEFBFB;
+        }
+
+.display-choice {
+    padding: 0px 1em;
+    width: 40px; 
+    color: grey; 
+    visibility: hidden;
+}
+#gameMsg {
+    font-size: 1em;
+    color: slategray;
+    font-family: 'Montserrat';
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+
+/* Buttons Container */
+.btn-container {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+}
+button {
+    color: #EEFBFB;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    border: 1px solid#007CC7;
+    border-radius: 50%;
+    background: #12232E;
+    height: 100px;
+    width: 100px;
+    font-size: 15px;
+    margin: 0.5em;
+    outline:none;
+    transition: all 1s;
+    }
+button:hover {
+    background-color: #121314b0;
+    transform: scale(1.1); 
+}
+
+/* Game cases style */
+.tie-color {
+    border-color:white;
+    color: white;
+}
+.win-color {
+    border-color: green;
+}
+.lose-color {
+    border-color: red;
+    color: red;
+}
+
+
+
+

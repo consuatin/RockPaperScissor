@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+    </style>
+    <title>Rock-Paper-Scissors</title>
+</head>
+<body>
+    <!-- Header and Initial Form -->
+    <header>
+        <h1>Rock - Paper - Scissors</h1>
+    </header>
+
+    <!-- Gameplay Field -->
+    <main id="gameplay">
+        <div class="score-box">
+            <h2>
+                <span class="rivals">Human</span>
+                    <span class="score">
+                        <span id="pScore">0</span>:<span id="cScore">0</span>
+                    </span>
+                <span class="rivals">Computer</span>
+            </h2>
+            <div>
+                <div>
+                    <img id="displayP" class="display-choice" src="img/place-holder.png" alt="Player1"   >
+                    <img id="displayC" class="display-choice" src="img/place-holder.png" alt="Computer1" >
+                </div>
+                <p id="gameMsg">Please choose your option.</p>
+            </div>
+        </div>
+        <div>
+            <h3 class="round-tag">Round <span id="roundNum">1</span></h3>
+        </div>
+        <div class="btn-container">
+            <button value="r" id="r" class="big-button" type="button" onclick="rock()"><img src="img/rock.png" alt="rock" style="width: 30px"></button>
+            <button value="p" id="p" class="big-button" type="button" onclick="paper()"><img src="img/paper.png" alt="paper" style="width: 30px"></button>
+            <button value="s" id="s" class="big-button" type="button" onclick="scissor()"><img src="img/scissors.png" alt="scissors" style="width: 30px"></button>
+        </div>
+        <div id="reset-score">
+            <a href="game.html"><button class="reset gray" type="button">RESET</button></a>
+        </div>
+    </main>
+
+
+    <footer>
+
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
