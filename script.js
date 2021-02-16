@@ -9,17 +9,21 @@ let cScore = document.getElementById("cScore");
 let gamePlay = document.getElementById("gamePlay");
 let gameMsg = document.getElementById("gameMsg");
 let roundNum = document.getElementById("roundNum");
+let endMessage = document.getElementById("endMessage");
+let restart = document.getElementById("restart");
 const YES = document.getElementById("yesGame");
 const NO = document.getElementById("noGame");
+const GAMEBOX = document.getElementById("gameplay");
 
 
 
 // Game Variables
-let round = 1;
+let roundLocalNum = 1;
 let compOption;
 let playerScore = 0;
 let computerScore = 0;
 let optionList = [ "r", "p", "s"];
+
 
 // Computer Option
 let selectCompOption = () => {
@@ -30,8 +34,8 @@ let selectCompOption = () => {
 
 // Case: player plays ROCK
 let rock = () => {
-    round++
-    roundNum.innerHTML = round;
+    roundLocalNum++
+    roundNum.innerHTML = roundLocalNum;
     DISPLAYP.src="img/rock.png";
     compOption = selectCompOption();
     DISPLAYP.style.visibility = "visible";
@@ -56,12 +60,13 @@ let rock = () => {
         setTimeout(function() {ROCK.classList.remove("win-color")}, 1000);
         DISPLAYC.src="img/f-scissors.png"
     }
+    endGame()
 }
 
 // Case: player plays PAPER
 let paper = () => {
-    round++
-    roundNum.innerHTML = round;
+    roundLocalNum++
+    roundNum.innerHTML = roundLocalNum;
     DISPLAYP.src="img/paper.png";
     compOption = selectCompOption();
     DISPLAYP.style.visibility = "visible";
@@ -86,12 +91,13 @@ let paper = () => {
         setTimeout(function() {PAPER.classList.remove("lose-color")}, 1000);
         DISPLAYC.src="img/f-scissors.png"
     }
+    endGame()
 }
 
 // Case: player plays SCISSOR
 let scissor = () => {
-    round++
-    roundNum.innerHTML = round;
+    roundLocalNum++
+    roundNum.innerHTML = roundLocalNum;
     DISPLAYP.src="img/scissors.png";
     compOption = selectCompOption();
     DISPLAYP.style.visibility = "visible";
@@ -115,5 +121,21 @@ let scissor = () => {
         SCISSOR.classList.add("lose-color");
         setTimeout(function() {SCISSOR.classList.remove("lose-color")}, 1000);
         DISPLAYC.src="img/rock.png";
+    }
+    endGame()
+}
+
+let endGame = () => {
+    if ((playerScore===5)||(computerScore===5)) {
+        GAMEBOX.style.visibility = "hidden";
+        DISPLAYP.style.visibility = "hidden";
+        DISPLAYC.style.visibility = "hidden";
+        if (playerScore===5) {
+            endMessage.innerHTML = `You won after ${roundLocalNum} rounds.`;
+            restart.innerHTML = "Wanna try again?<br>Press Reset";
+        } else {
+            endMessage.innerHTML = `You lost after ${roundLocalNum} rounds.`;
+            restart.innerHTML = "Wanna try again?<br>Press Reset";
+        }
     }
 }

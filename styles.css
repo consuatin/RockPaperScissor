@@ -81,8 +81,7 @@ input {
     background-color: gray;
 }
 /* MAIN */
-main {
-}
+
 /* ROUND TAG */
 .round-tag {
     display: inline-block;
@@ -190,6 +189,16 @@ button:hover {
     color: red;
 }
 
-
-
-
+/* END MESSAGE */
+#endMessage { 
+    margin-top: 100px;
+    position: absolute;
+    padding: 25px;
+    text-align: center;
+}
+#restart {
+    margin-top: 200px;
+    position: absolute;
+    padding: 25px;
+    text-align: center;
+}

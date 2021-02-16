@@ -18,10 +18,12 @@
     <header>
         <h1>Rock - Paper - Scissors</h1>
     </header>
-
+    <!-- End Message -->
+    <h2 id="endMessage"></h2>
+    <h2 id="restart"></h2>
     <!-- Gameplay Field -->
     <main id="gameplay">
-        <div class="score-box">
+        <div class="score-box" id="score-box">
             <h2>
                 <span class="rivals">Human</span>
                     <span class="score">
@@ -45,14 +47,13 @@
             <button value="p" id="p" class="big-button" type="button" onclick="paper()"><img src="img/paper.png" alt="paper" style="width: 30px"></button>
             <button value="s" id="s" class="big-button" type="button" onclick="scissor()"><img src="img/scissors.png" alt="scissors" style="width: 30px"></button>
         </div>
-        <div id="reset-score">
-            <a href="game.html"><button class="reset gray" type="button">RESET</button></a>
-        </div>
     </main>
 
 
     <footer>
-
+        <div id="reset-score">
+            <a href="game.html"><button class="reset gray" type="button">RESET</button></a>
+        </div>
     </footer>
 <script src="script.js"></script>
 </body>
