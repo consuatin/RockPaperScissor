@@ -1,0 +1,12 @@
+{
+  "name": "RockPaperScissor",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:consuatin/RockPaperScissor.git",
+  "author": "Constantin <https://github.com/consuatin>",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
